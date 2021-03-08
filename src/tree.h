@@ -1,6 +1,8 @@
 #ifndef TREE_H
 #define TREE_H
 
+#include <iostream>
+
 template<typename T>
 struct BST_Node {
 T val;
@@ -36,7 +38,17 @@ void delete_tree(BST_Node<T>* root){
 //your work starts here
 template<typename T>
 int num_nodes(BST_Node<T>* root){
-    return 0;
+    print_nodes(root);
+}
+
+
+template<typename T>
+void print_nodes(BST_Node<T>* root){
+    if (root==NULL) return;
+
+    print_nodes(root->left);
+    std::cout<<(root->val)<<std::endl;
+    print_nodes(root->right);
 }
 
 

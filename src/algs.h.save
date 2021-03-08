@@ -1,0 +1,25 @@
+#ifndef ALGS_H
+#define ALGS_H
+
+#include <algorithm>
+#include <queue>
+using std::swap;
+
+//
+
+
+template<typename T>
+void heapsort(std::vector<T>& V){
+    auto S = V;
+    std::sort(S.begin(),V.end());
+    for (T x : S) ;
+}
+
+
+
+bool are_anagrams(std::string a, std::string b){
+	return true;
+}
+
+
+#endif
